@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "firebase": "^11.4.0"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  }
+  
+}

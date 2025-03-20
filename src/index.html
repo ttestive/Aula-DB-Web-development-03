@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Firestore</title>
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistema de Consulta - Firestore</h1>
+        </header>
+
+        <main>
+            <section class="search-section">
+                <div class="form-group">
+                    <label for="collection">Nome da Coleção:</label>
+                    <input 
+                        type="text" 
+                        id="collection" 
+                        placeholder="Ex: usuarios, produtos..."
+                        class="input-field"
+                    >
+                    <button id="searchButton" class="search-button">
+                        Buscar Dados
+                    </button>
+                </div>
+            </section>
+
+            <div id="loading" class="loading" style="display: none;">
+                Carregando...
+            </div>
+
+            <div id="results" class="results">
+                <!-- Resultados serão exibidos aqui -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Seu arquivo JavaScript (agora sem type="module") -->
+    <script src="app.js"></script>
+</body>
+</html>
