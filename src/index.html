@@ -17,14 +17,17 @@
         </header>
 
         <main>
+            <!-- Seção para consulta de dados -->
             <section class="search-section">
+                <h2>Buscar Dados da Obra</h2>
                 <div class="form-group">
                     <label for="collection">Nome da Coleção:</label>
                     <input 
                         type="text" 
                         id="collection" 
-                        placeholder="Ex: usuarios, produtos..."
+                        placeholder="Ex: obras"
                         class="input-field"
+                        value="obras"
                     >
                     <button id="searchButton" class="search-button">
                         Buscar Dados
@@ -37,12 +40,35 @@
             </div>
 
             <div id="results" class="results">
-                <!-- Resultados serão exibidos aqui -->
+                <!-- Resultados da consulta serão exibidos aqui -->
             </div>
+
+            <!-- Seção para cadastro de obra -->
+            <section class="form-section">
+                <h2>Cadastrar Obra</h2>
+                <form id="formCadastroObra">
+                    <div class="form-group">
+                        <label for="area_total">Área Total (m²):</label>
+                        <input type="number" id="area_total" placeholder="Digite a área total" class="input-field" required step="0.01" min="0.01">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="custo_material">Custo dos Materiais (R$):</label>
+                        <input type="number" id="custo_material" placeholder="Digite o custo dos materiais" class="input-field" required step="0.01" min="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="custo_mao_obra">Custo da Mão de Obra (R$):</label>
+                        <input type="number" id="custo_mao_obra" placeholder="Digite o custo da mão de obra" class="input-field" required step="0.01" min="0">
+                    </div>
+
+                    <button type="submit" class="submit-button">Cadastrar Obra</button>
+                </form>
+            </section>
         </main>
     </div>
 
-    <!-- Seu arquivo JavaScript (agora sem type="module") -->
+    <!-- Seu arquivo JavaScript -->
     <script src="app.js"></script>
 </body>
 </html>
